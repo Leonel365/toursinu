@@ -6,6 +6,10 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+        $user['tipo'] = 'index';
+        $data['cabecera'] = view('templates/cabecera', $user);
+       $data['pie'] = view('templates/footer');
+       
+        return view('index', $data);
     }
 }

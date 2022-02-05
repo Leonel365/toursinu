@@ -1,0 +1,188 @@
+CRITICAL - 2022-02-04 10:21:41 --> Invalid file: template/cabecera.php
+#0 C:\xampp\htdocs\toursinu\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/cabece...')
+#1 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('template/cabece...', Array, true)
+#2 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(9): view('template/cabece...')
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-04 14:25:47 --> Undefined variable $user
+#0 C:\xampp\htdocs\toursinu\app\Views\templates\cabecera.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('templates/cabec...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(9): view('templates/cabec...')
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-04 14:26:49 --> Undefined variable $user
+#0 C:\xampp\htdocs\toursinu\app\Views\templates\cabecera.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('templates/cabec...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(9): view('templates/cabec...')
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-04 14:26:50 --> Undefined variable $user
+#0 C:\xampp\htdocs\toursinu\app\Views\templates\cabecera.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('templates/cabec...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(9): view('templates/cabec...')
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-04 14:27:19 --> Undefined variable $user
+#0 C:\xampp\htdocs\toursinu\app\Views\templates\cabecera.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('templates/cabec...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(9): view('templates/cabec...')
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-04 14:28:03 --> Undefined variable $data
+#0 C:\xampp\htdocs\toursinu\app\Views\templates\cabecera.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('templates/cabec...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(9): view('templates/cabec...')
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-04 14:29:04 --> Undefined variable $user
+#0 C:\xampp\htdocs\toursinu\app\Views\templates\cabecera.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('templates/cabec...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(9): view('templates/cabec...')
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-04 14:31:14 --> Invalid file: template/footer.php
+#0 C:\xampp\htdocs\toursinu\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/footer...')
+#1 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('template/footer', Array, true)
+#2 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(10): view('template/footer')
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-04 14:31:45 --> Array to string conversion
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 12)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-04 14:33:09 --> Undefined array key 2
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 12)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-04 14:33:32 --> Undefined array key 0
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 12)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-04 14:56:10 --> Undefined variable $user
+#0 C:\xampp\htdocs\toursinu\app\Views\templates\cabecera.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 33)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('templates/cabec...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(9): view('templates/cabec...')
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-04 14:59:12 --> Undefined variable $user
+#0 C:\xampp\htdocs\toursinu\app\Views\templates\cabecera.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 33)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('templates/cabec...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(12): view('templates/cabec...')
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-04 15:03:19 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\toursinu\app\Controllers\Home.php on line 14
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(14): view('templates/cabec...', 'turista')
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-04 15:13:20 --> Undefined variable $user
+#0 C:\xampp\htdocs\toursinu\app\Views\templates\cabecera.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 33)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('templates/cabec...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(10): view('templates/cabec...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-04 15:29:41 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\toursinu\app\Controllers\Home.php on line 10
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(10): view('templates/cabec...', 'Turista')
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-04 16:28:34 --> Invalid file: lugares.php
+#0 C:\xampp\htdocs\toursinu\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('lugares.php')
+#1 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('lugares', Array, true)
+#2 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(13): view('lugares', Array)
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->index()
+#4 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-04 16:34:07 --> Invalid file: lugares.php
+#0 C:\xampp\htdocs\toursinu\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('lugares.php')
+#1 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('lugares', Array, true)
+#2 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(13): view('lugares', Array)
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->index()
+#4 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-04 17:10:57 --> Undefined variable $datos
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 22)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->Login()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-04 17:27:21 --> Undefined variable $cabecer
+#0 C:\xampp\htdocs\toursinu\app\Views\login\login.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 1)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('login/login', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(22): view('login/login', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->login()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

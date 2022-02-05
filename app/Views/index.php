@@ -1,0 +1,8 @@
+
+	<?=$cabecera?>
+
+	
+
+
+</body>
+</html>
