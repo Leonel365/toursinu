@@ -13,7 +13,7 @@
 </head>
 <body style="background-color:#E3FFF8">
 <div class="text-center">
-    <img class="block-center" src="<?=BAse_URL()?>/photo/login.png" width="120px">
+    <img class="block-center" src="<?=BAse_URL()?>/photo/login.png" width="120px"> 
                               
 </div>
 <?php 
