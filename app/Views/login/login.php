@@ -11,7 +11,7 @@
         
         </div>
         <div class="modal-body">
-            <iframe src="<?=Base_url('validar/')?>" frameborder="0" width="440px" height="420px"></iframe>
+            <iframe src="<?=Base_url('validar')?>" frameborder="0" width="440px" height="420px"></iframe>
         </div>
         </div>
     </div>

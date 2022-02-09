@@ -1,0 +1,108 @@
+CRITICAL - 2022-02-06 20:15:25 --> Undefined array key "usuario"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 21)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-06 20:21:41 --> Undefined variable $idUser
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 98)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->validar_User()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-06 20:26:21 --> Undefined variable $validation
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 145)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->validarLugar()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-06 20:37:39 --> ini_set(): Session ini settings cannot be changed when a session is active
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Sess...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\toursinu\system\Session\Handlers\FileHandler.php(71): ini_set('session.save_pa...', 'C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\Config\Services.php(570): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '127.0.0.1')
+#3 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#4 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#5 C:\xampp\htdocs\toursinu\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#6 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#7 C:\xampp\htdocs\toursinu\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\toursinu\app\Views\publicar.php(4): session('msj_publicar')
+#9 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#11 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('publicar', Array, true)
+#12 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(56): view('publicar', Array)
+#13 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->publicar()
+#14 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#15 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#17 {main}
+CRITICAL - 2022-02-06 20:37:56 --> ini_set(): Session ini settings cannot be changed when a session is active
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Sess...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\toursinu\system\Session\Handlers\FileHandler.php(71): ini_set('session.save_pa...', 'C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\Config\Services.php(570): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '127.0.0.1')
+#3 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#4 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#5 C:\xampp\htdocs\toursinu\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#6 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#7 C:\xampp\htdocs\toursinu\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\toursinu\app\Views\publicar.php(4): session('msj_publicar')
+#9 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#11 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('publicar', Array, true)
+#12 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(56): view('publicar', Array)
+#13 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->publicar()
+#14 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#15 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#17 {main}
+CRITICAL - 2022-02-06 20:37:57 --> ini_set(): Session ini settings cannot be changed when a session is active
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Sess...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\toursinu\system\Session\Handlers\FileHandler.php(71): ini_set('session.save_pa...', 'C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\Config\Services.php(570): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '127.0.0.1')
+#3 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#4 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#5 C:\xampp\htdocs\toursinu\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#6 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#7 C:\xampp\htdocs\toursinu\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\toursinu\app\Views\publicar.php(4): session('msj_publicar')
+#9 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#11 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('publicar', Array, true)
+#12 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(56): view('publicar', Array)
+#13 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->publicar()
+#14 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#15 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#16 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#17 {main}
+CRITICAL - 2022-02-06 20:47:22 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->validarLugar()
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-06 20:54:23 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->validarLugar()
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-06 20:59:51 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->validarLugar()
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-06 21:00:33 --> Call to a member function getRandomName() on null
+#0 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->validarLugar()
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-06 21:05:51 --> Class "App\Models\lugar" not found
+#0 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->validarLugar()
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

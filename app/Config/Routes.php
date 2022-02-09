@@ -35,6 +35,14 @@ $routes->get('/', 'Home::index');
 $routes->get('lugares', 'Lugares::index');
 $routes->get('login', 'Lugares::login');
 $routes->get('validar', 'Lugares::validar_Login');
+$routes->post('validar_user', 'Lugares::validar_User');
+$routes->get('publicar/(:num)', 'Home::publicar/$1');
+$routes->get('home', 'Home::home');
+$routes->post('publicarForm', 'Lugares::validarLugar');
+$routes->get('registrar_1', 'Home::registrar_1');
+$routes->get('registrar', 'Home::registrar');
+$routes->get('addTurista', 'Home::addTurista');
+$routes->get('addHotel', 'Home::addHotel');
 
 /*
  * --------------------------------------------------------------------
