@@ -8,7 +8,6 @@ class Home extends BaseController
     public function index()
     {
 
-  
         $user['tipo'] = 'index';
         $data['cabecera'] = view('templates/cabecera', $user);
        $data['pie'] = view('templates/footer');
@@ -21,6 +20,24 @@ class Home extends BaseController
         ?>
 		<script>
 		window.parent.location="<?=Base_url('registrar')?>";
+		</script>
+<?php
+    }
+
+    public function atras()
+    {
+        ?>
+		<script>window.history.back();<script>
+<?php
+    }
+
+    public function cerrarSesion()
+    {
+        @session_start();
+        session_destroy();
+        ?>
+		<script>
+		window.parent.location="<?=Base_url('/')?>";
 		</script>
 <?php
     }
@@ -56,7 +73,7 @@ class Home extends BaseController
     
        $user['tipo'] = $tipo;
        $user['nombre'] = $nombre;
-       $data['cabecera'] = view('templates/cabecera', $user);
+       $data['cabecera'] = view('components/navbar', $user);
       $data['pie'] = view('templates/footer');
 
         return view('index', $data);

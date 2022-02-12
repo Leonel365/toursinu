@@ -9,6 +9,18 @@ class Lugares extends BaseController
 
     public function index()
     {
+       
+       $tipo = "index";     
+       $user['tipo'] = $tipo;
+       $data['cabecera'] = view('templates/cabecera', $user);
+      $data['pie'] = view('templates/footer');
+
+       
+        return view('lugares', $data);
+    }
+
+    public function Lugares()
+    {
         $db = \Config\Database::connect();
        session_start();
        $tipo = "index";
@@ -72,7 +84,7 @@ class Lugares extends BaseController
         }
          if($id_persona>0){
            
-            $sql = "SELECT idTurista FROM turista WHERE idPersona = idTurista and idPersona = $id_persona";
+            $sql = "SELECT idTurista FROM turista WHERE idPersona = $id_persona";
             $query = $db->query($sql);
             $results = $query->getResultArray();
     
@@ -80,7 +92,7 @@ class Lugares extends BaseController
                 $idUser = 1;
             }
 
-            $sql = "SELECT idEmpleado FROM empleado WHERE idPersona = idEmpleado and idPersona = $id_persona";
+            $sql = "SELECT idEmpleado FROM empleado WHERE idPersona = $id_persona";
             $query = $db->query($sql);
             $results = $query->getResultArray();
     

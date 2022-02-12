@@ -2,27 +2,27 @@
 <p><br></p>
 <h5 class="modal-title w-100 text-center" style="color: #36907A"><b>Formulario para registrar un nuevo turista</b></h5>
 <p><br></p>
-<form>
+<form id="form">
   <div class="form-row">
     <div class="form-group col-md">
       <label for="name">Nombre:</label>
       <input type="text" name="name"class="form-control" id="name">
     </div>
     <div class="form-group col-md">
-      <label for="apellido1">Primer apellido:</label>
-      <input type="text"  name="apellido1" class="form-control" id="apellido1">
+      <label for="firstName1">Primer apellido:</label>
+      <input type="text"  name="firstName1" class="form-control" id="firstName1">
     </div>
     <div class="form-group col-md">
-    <label for="apellido2">Segundo Apellido:</label>
-    <input type="text" class="form-control" name="apellido2" id="apellido2">
+    <label for="firstName2">Segundo Apellido:</label>
+    <input type="text" class="form-control" name="firstName2" id="firstName2">
   </div>
   </div>
  
 
   <div class="form-row">
   <div class="form-group col-md">
-    <label for="correo">Correo electronico:</label>
-    <input type="correo" class="form-control" id="correo" placeholder="Micorreo@dominio.com">
+    <label for="email">Correo electronico:</label>
+    <input type="email" class="form-control" id="email" placeholder="Micorreo@dominio.com">
   </div>
     <div class="form-group col-md">
       <label for="password">Contraseña:</label>
@@ -35,9 +35,11 @@
   </div>
 <br>
   <div class="text-right">
-      <button class="btn" style="background-color: #36907A; color:#FFFFFF">Regresar</button>
+      <a href=""<?=Base_url('atras')?>"" class="btn" style="background-color: #36907A; color:#FFFFFF">Regresar</a>
  <input type="submit" class="btn" style="background-color: #36907A; color:#FFFFFF" value="Registrar">
  </div>
-</form>
+</formmethod=>
+
+<script src ="<?=Base_url()?>/CodeJS/turista.js"></script>
 
 <?=$pie?>

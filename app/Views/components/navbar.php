@@ -15,7 +15,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #36907A">
-<a class="navbar-brand" href="<?=Base_url('/')?>">
+<a class="navbar-brand" href="<?=Base_url('home')?>">
     <img src="<?=Base_url()?>/photo/logo.png" width="100px" height="30" alt="TourSinú">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,13 +24,13 @@
   <div class="collapse navbar-collapse" id="navbarScroll">
     <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
       <li class="nav-item active">
-        <a class="nav-link" href="<?=Base_url('/')?>"><b style="color:  #FDFEFE">Inicio</b> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?=Base_url('home')?>"><b style="color:  #FDFEFE">Inicio</b> <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?=Base_url('lugares')?>"><b style="color:  #FDFEFE">Lugares</b></a>
+        <a class="nav-link" href="<?=Base_url('lugares/user')?>"><b style="color:  #FDFEFE">Lugares</b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?=Base_url('categorias')?>"><b style="color:  #FDFEFE">Hoteles</b></a>
+        <a class="nav-link" href="<?=Base_url('hoteles/user')?>"><b style="color:  #FDFEFE">Hoteles</b></a>
       </li>
     
       <?php

@@ -1,19 +1,50 @@
 <?=$cabecera?>
+<?php
+ $db = \Config\Database::connect();
+$cabecera;
+    $sql = "SELECT idLugares, Descripcion, Direccion, Nombre FROM lugares WHERE tipo = 1";
+    $query = $db->query($sql);
+    $results = $query->getResultArray();
+    $open = 3;
+    $close = 0;
 
-<div class = "row">
 
-        <div class="col-sm">
+    foreach ( $results as $places){
+        if($open === 3){
+            echo "<p><br></p>";
+            echo "<div class = 'row'>";
+             $open = 0;
+
+        }
+    ?>
+
+
+        <div class="col-4">
          <div class="card" style="width: 18rem;">
             <img src="<?=Base_URL()?>/catalogo/1.png" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="text-center"><h5 class="card-title" ><?=$places['Nombre']?></h5></div>
+                <p class="card-text" style = "text-align: justify;"><?php echo substr($places['Descripcion'], 0, 150)." ..."; ?></p>
+                <a href="#" class="btn btn-primary btn-block">Conocer más</a>
             </div>
             </div>
 
         </div>
 
-</div>
+       
 
-<?=$pie?>
+
+<?php
+ $close++;
+  if($close === 3){
+    echo "</div>";
+    $close = 0;
+
+}
+    $open ++;
+   
+    }
+    if($close !== 3){
+    echo "</div>";
+    }
+echo $pie;

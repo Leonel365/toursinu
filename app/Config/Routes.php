@@ -33,6 +33,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('lugares', 'Lugares::index');
+$routes->get('lugaresUsers', 'Lugares::Lugares');
 $routes->get('login', 'Lugares::login');
 $routes->get('validar', 'Lugares::validar_Login');
 $routes->post('validar_user', 'Lugares::validar_User');
@@ -43,6 +44,8 @@ $routes->get('registrar_1', 'Home::registrar_1');
 $routes->get('registrar', 'Home::registrar');
 $routes->get('addTurista', 'Home::addTurista');
 $routes->get('addHotel', 'Home::addHotel');
+$routes->get('logout', 'Home::cerrarSesion');
+$routes->get('atras', 'Home::atras');
 
 /*
  * --------------------------------------------------------------------
