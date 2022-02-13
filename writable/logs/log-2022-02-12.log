@@ -1,0 +1,127 @@
+CRITICAL - 2022-02-12 11:26:10 --> Class "Alert" not found
+#0 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->validarHotel()
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-12 11:27:30 --> Call to undefined function App\Controllers\alert()
+#0 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->validarHotel()
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-12 11:27:47 --> Call to undefined function App\Controllers\alert()
+#0 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->validarHotel()
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-12 12:00:36 --> Undefined array key "usuario"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 87)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->publicar('0')
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-12 12:37:44 --> Undefined variable $foto
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 43)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->validarHotel()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-12 12:41:52 --> Undefined variable $password
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 37)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->validarHotel()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-12 12:42:20 --> Undefined variable $password
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 37)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->validarHotel()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-12 18:13:28 --> Array to string conversion
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 38)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->validarHotel()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-12 18:51:59 --> Call to undefined method App\Controllers\Hoteles::insert()
+#0 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->validarHotel()
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-02-12 18:56:36 --> Column 'usuario' cannot be null
+ERROR - 2022-02-12 18:56:36 --> Table 'toursinu.catalogo_hote' doesn't exist
+ERROR - 2022-02-12 18:58:47 --> Column 'usuario' cannot be null
+ERROR - 2022-02-12 18:58:47 --> Table 'toursinu.catalogo_hote' doesn't exist
+ERROR - 2022-02-12 19:03:18 --> Table 'toursinu.catalogo_hote' doesn't exist
+ERROR - 2022-02-12 19:08:40 --> Table 'toursinu.catalogo_hote' doesn't exist
+CRITICAL - 2022-02-12 19:31:55 --> Invalid file: hoteles/0.php
+#0 C:\xampp\htdocs\toursinu\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('hoteles/0.php')
+#1 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('hoteles/0', Array, true)
+#2 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(16): view('hoteles/0', Array)
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->index()
+#4 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-12 19:32:14 --> Invalid file: hoteles/0.php
+#0 C:\xampp\htdocs\toursinu\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('hoteles/0.php')
+#1 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('hoteles/0', Array, true)
+#2 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(16): view('hoteles/0', Array)
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->index()
+#4 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-12 19:36:03 --> Undefined array key "Nombre"
+#0 C:\xampp\htdocs\toursinu\app\Views\hoteles.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 26)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('hoteles', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(16): view('hoteles', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-12 19:36:16 --> Undefined array key "sescripcion"
+#0 C:\xampp\htdocs\toursinu\app\Views\hoteles.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 27)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('hoteles', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(16): view('hoteles', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-12 19:42:43 --> Undefined variable $foto
+#0 C:\xampp\htdocs\toursinu\app\Views\hoteles.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 31)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('hoteles', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(16): view('hoteles', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-12 19:46:29 --> Undefined variable $foto
+#0 C:\xampp\htdocs\toursinu\app\Views\hoteles.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 31)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('hoteles', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(16): view('hoteles', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->index()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

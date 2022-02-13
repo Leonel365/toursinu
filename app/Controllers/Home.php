@@ -24,13 +24,6 @@ class Home extends BaseController
 <?php
     }
 
-    public function atras()
-    {
-        ?>
-		<script>window.history.back();<script>
-<?php
-    }
-
     public function cerrarSesion()
     {
         @session_start();
@@ -98,14 +91,14 @@ class Home extends BaseController
      
         $user['tipo'] = $tipo;
         $user['nombre'] = $nombre;
-        $data['cabecera'] = view('templates/cabecera', $user);
+        $data['cabecera'] = view('components/navbar', $user);
        $data['pie'] = view('templates/footer');
        $data['estado'] = $estado;
        
         return view('publicar', $data);
     }
 
-    public function addTurista()
+    public function addTurista($estado)
     {
 
         $tipo = "index";
@@ -113,18 +106,20 @@ class Home extends BaseController
         $user['tipo'] = $tipo;
         $data['cabecera'] = view('templates/cabecera', $user);
        $data['pie'] = view('templates/footer');
+       $data['estado'] = $estado;
        
         return view('registro/turista/turista', $data);
     }
 
-    public function addHotel()
+    public function addHotel($estado)
     {
 
         $tipo = "index";
      
-        $user['tipo'] = $tipo;
-        $data['cabecera'] = view('templates/cabecera', $user);
+       $user['tipo'] = $tipo;
+       $data['cabecera'] = view('templates/cabecera', $user);
        $data['pie'] = view('templates/footer');
+       $data['estado'] = $estado;
        
         return view('registro/hotel/hotel', $data);
     }

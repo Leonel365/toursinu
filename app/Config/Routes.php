@@ -42,10 +42,16 @@ $routes->get('home', 'Home::home');
 $routes->post('publicarForm', 'Lugares::validarLugar');
 $routes->get('registrar_1', 'Home::registrar_1');
 $routes->get('registrar', 'Home::registrar');
-$routes->get('addTurista', 'Home::addTurista');
-$routes->get('addHotel', 'Home::addHotel');
+$routes->get('addTurista/(:num)', 'Home::addTurista/$1');
+$routes->get('addHotel/(:num)', 'Home::addHotel/$1');
 $routes->get('logout', 'Home::cerrarSesion');
 $routes->get('atras', 'Home::atras');
+$routes->get('hoteles', 'Hoteles::index');
+$routes->post('hotelForm', 'Hoteles::validarHotel');
+$routes->post('turistaForm', 'Turistas::validarTurista');
+$routes->get('lugares/user', 'Lugares::lugaresUser');
+$routes->get('hoteles/user', 'Hoteles::hotelesUser');
+$routes->get('reservas/user', 'Turistas::Reservas');
 
 /*
  * --------------------------------------------------------------------

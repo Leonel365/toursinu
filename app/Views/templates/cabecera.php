@@ -30,7 +30,7 @@
         <a class="nav-link" href="<?=Base_url('lugares')?>"><b style="color:  #FDFEFE">Lugares</b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?=Base_url('categorias')?>"><b style="color:  #FDFEFE">Hoteles</b></a>
+        <a class="nav-link" href="<?=Base_url('hoteles')?>"><b style="color:  #FDFEFE">Hoteles</b></a>
       </li>
     
       <?php

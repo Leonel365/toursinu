@@ -19,6 +19,33 @@ class Lugares extends BaseController
         return view('lugares', $data);
     }
 
+    public function lugaresUser()
+    {
+       
+       $db = \Config\Database::connect();
+       session_start();
+       $tipo = "index";
+       $nombre = 'NN';
+       if($_SESSION['usuario']!= '0'){
+           $correo = $_SESSION['usuario'];
+           $tipo = $_SESSION['tipo_user'];
+           $sql = "SELECT CONCAT(primer_nombre, ' ', primer_apellido) as nombre FROM persona WHERE correo like '$correo'";
+           $query = $db->query($sql);
+           $results = $query->getResultArray();
+       
+       foreach ($results as $row){
+           $nombre = $row['nombre'];
+       }
+       }
+    
+       $user['tipo'] = $tipo;
+       $user['nombre'] = $nombre;
+       $data['cabecera'] = view('components/navbar', $user);
+      $data['pie'] = view('templates/footer');
+       
+        return view('lugares', $data);
+    }
+
     public function Lugares()
     {
         $db = \Config\Database::connect();
@@ -73,9 +100,9 @@ class Lugares extends BaseController
         $conexion = new  BaseController();
         $usario = $this->request->getVar('user');
 		$password1= $this->request->getVar('password');
-		//$password = sha1($password1);
+		$password = sha1($password1);
 
-        $sql = "SELECT idPersona FROM persona WHERE usuario like '$usario' and contrasena like '$password1'";
+        $sql = "SELECT idPersona FROM persona WHERE usuario like '$usario' and contrasena like '$password'";
         $query = $db->query($sql);
         $results = $query->getResultArray();
         
@@ -102,7 +129,7 @@ class Lugares extends BaseController
 
             }
 
-            $sql = "SELECT idHoteles FROM hoteles WHERE usuario like '$usario' and contrasena like '$password1'";
+            $sql = "SELECT idHoteles FROM hoteles WHERE usuario like '$usario' and contrasena like '$password'";
             $query = $db->query($sql);
             $results = $query->getResultArray();
             
@@ -195,7 +222,5 @@ class Lugares extends BaseController
                     </script>  <?php
                    }
 
-            
-
-    }
+        }
 }

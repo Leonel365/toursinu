@@ -17,7 +17,6 @@
 </div>
 <?php 
    if(session('mensaje')){
-    $tipo = session('mensaje');
        ?>
         <script>
         Swal.fire({
@@ -31,8 +30,6 @@
    } ?>
 
 <form method="POST" action="<?=Base_url('validar_user')?>">
-
-        <input type="hidden" name="tipo" value="<?=$tipo?>">
         
     <div class="form-group">
         <label for="user">Correo:</label>

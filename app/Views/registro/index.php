@@ -8,9 +8,9 @@
 </div>
         <div class ="col-sm" >
         <div class="card" style="width: 18rem; border: none">
-        <a  href="<?=Base_url('addTurista')?>"><img src="<?=Base_url()?>/photo/turistas.png" class="card-img-top" alt="Registro como Turista"></a>  
+        <a  href="<?=Base_url('addTurista/0')?>"><img src="<?=Base_url()?>/photo/turistas.png" class="card-img-top" alt="Registro como Turista"></a>  
             <div class="card-body">
-                 <a href="<?=Base_url('addTurista')?>" style="background-color: #36907A; color:#FFFFFF" class="btn btn-block">Turista</a>
+                 <a href="<?=Base_url('addTurista/0')?>" style="background-color: #36907A; color:#FFFFFF" class="btn btn-block">Turista</a>
             </div>
             </div>
 
@@ -19,10 +19,10 @@
 
         <div class ="col-sm" >
         <div class="card" style="width: 18rem; border: none">
-        <a href="<?=Base_url('addHotel')?>" ><img src="<?=Base_url()?>/photo/hoteles.png" class="card-img-top" alt="Registro como Hotel"></a>
+        <a href="<?=Base_url('addHotel/0')?>" ><img src="<?=Base_url()?>/photo/hoteles.png" class="card-img-top" alt="Registro como Hotel"></a>
             <div class="card-body">
        
-              <a href="<?=Base_url('addHotel')?>" style="background-color: #36907A; color:#FFFFFF" class="btn btn-block">Hotel</a>
+              <a href="<?=Base_url('addHotel/0')?>" style="background-color: #36907A; color:#FFFFFF" class="btn btn-block">Hotel</a>
           
             </div>
             </div>

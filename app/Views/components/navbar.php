@@ -41,7 +41,7 @@
         <a class="nav-link" href="<?=Base_url('publicar/0')?>"><b style="color:  #FDFEFE">Publicar</b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?=Base_url('#')?>"><b style="color:  #FDFEFE">Reservas</b></a>
+        <a class="nav-link" href="<?=Base_url('reservas/user')?>"><b style="color:  #FDFEFE">Reservas</b></a>
       </li>
 
       <?php
