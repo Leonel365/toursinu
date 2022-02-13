@@ -44,7 +44,20 @@
         <a class="nav-link" href="<?=Base_url('reservas/user')?>"><b style="color:  #FDFEFE">Reservas</b></a>
       </li>
 
-      <?php
+      <?php  
+}
+
+if($tipo==='hotel')
+{
+?>
+<li class="nav-item">
+<a class="nav-link" href="<?=Base_url('publicar/0')?>"><b style="color:  #FDFEFE">Reservas</b></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="<?=Base_url('reservas/user')?>"><b style="color:  #FDFEFE">Trabajadores</b></a>
+</li>
+
+<?php
 }
 
         if($tipo==='empleado')

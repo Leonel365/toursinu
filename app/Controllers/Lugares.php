@@ -139,7 +139,7 @@ class Lugares extends BaseController
       
         if($idHotel>0){
             session_start();
-            $_SESSION['usuario']=$usario;
+            $_SESSION['usuarioHotel']=$usario;
             $_SESSION['tipo_user']="hotel";
             
                 ?>

@@ -26,8 +26,10 @@ class Home extends BaseController
 
     public function cerrarSesion()
     {
-        @session_start();
+       @session_start();
         session_destroy();
+        unset($_SESSION['usuario']);
+        unset($_SESSION['tipo_user']);
         ?>
 		<script>
 		window.parent.location="<?=Base_url('/')?>";
@@ -50,11 +52,20 @@ class Home extends BaseController
 
        $db = \Config\Database::connect();
        session_start();
-       $tipo = "index";
+       $tipo =  $_SESSION['tipo_user'];
        $nombre = 'NN';
-       if($_SESSION['usuario']!= '0'){
+       if($tipo==='hotel'){
+        $correo = $_SESSION['usuarioHotel'];
+
+        $sql = "SELECT nombre FROM hoteles WHERE usuario LIKE '$correo'";
+        $query = $db->query($sql);
+        $results = $query->getResultArray();
+    
+    foreach ($results as $row){
+        $nombre = $row['nombre'];
+    }
+       }else{
            $correo = $_SESSION['usuario'];
-           $tipo = $_SESSION['tipo_user'];
            $sql = "SELECT CONCAT(primer_nombre, ' ', primer_apellido) as nombre FROM persona WHERE correo like '$correo'";
            $query = $db->query($sql);
            $results = $query->getResultArray();

@@ -90,4 +90,15 @@ class Hoteles extends BaseController
 
          
     }
+
+    public function verHotel($id){
+      $tipo = "index";     
+      $user['tipo'] = $tipo;
+      $data['cabecera'] = view('templates/cabecera', $user);
+     $data['pie'] = view('templates/footer');
+     $data['idHotel'] = $id;
+
+      
+       return view('registro/hotel/verHotel', $data);
+  }
 }

@@ -1,7 +1,6 @@
-<?=$cabecera?>
 <?php
  $db = \Config\Database::connect();
-$cabecera;
+ echo $cabecera;
     $sql = "SELECT idHoteles, descripcion, nombre, direccion FROM hoteles";
     $query = $db->query($sql);
     $results = $query->getResultArray();
@@ -33,7 +32,7 @@ $cabecera;
             <div class="card-body">
                 <div class="text-center"><h5 class="card-title" ><?=$hotel['nombre']?></h5></div>
                 <p class="card-text" style = "text-align: justify;"><?php echo substr($hotel['descripcion'], 0, 150)." ..."; ?></p>
-                <a href="#" class="btn btn-primary btn-block">Conocer más</a>
+                <a href="<?=Base_URL('verHotel/'.$idHotel)?>"  class="btn btn-primary btn-block">Conocer más</a>
             </div>
             </div>
 
