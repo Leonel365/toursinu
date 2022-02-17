@@ -53,6 +53,7 @@ $routes->get('lugares/user', 'Lugares::lugaresUser');
 $routes->get('hoteles/user', 'Hoteles::hotelesUser');
 $routes->get('reservas/user', 'Turistas::Reservas');
 $routes->get('verHotel/(:num)', 'Hoteles::verHotel/$1');
+$routes->get('trabajadores/list', 'Hoteles::AddTrabajador');
 
 /*
  * --------------------------------------------------------------------

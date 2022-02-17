@@ -16,15 +16,13 @@ class Hoteles extends BaseController
          return view('hoteles', $data);
     }
 
-    public function hotelesUser(){
-
+    public function tipoMenu(){
       $db = \Config\Database::connect();
       session_start();
-      $tipo = "index";
+      $tipo =  $_SESSION['tipo_user'];
       $nombre = 'NN';
-      if($_SESSION['usuario']!= '0'){
+      if($tipo!=='hotel'){
           $correo = $_SESSION['usuario'];
-          $tipo = $_SESSION['tipo_user'];
           $sql = "SELECT CONCAT(primer_nombre, ' ', primer_apellido) as nombre FROM persona WHERE correo like '$correo'";
           $query = $db->query($sql);
           $results = $query->getResultArray();
@@ -32,13 +30,37 @@ class Hoteles extends BaseController
       foreach ($results as $row){
           $nombre = $row['nombre'];
       }
-      }
-   
       $user['tipo'] = $tipo;
       $user['nombre'] = $nombre;
       $data['cabecera'] = view('components/navbar', $user);
       $data['pie'] = view('templates/footer');
 
+      }else{
+        $correo = $_SESSION['usuarioHotel'];
+
+        $sql = "SELECT nombre, idHoteles FROM hoteles WHERE usuario LIKE '$correo'";
+        $query = $db->query($sql);
+        $results = $query->getResultArray();
+    
+    foreach ($results as $row){
+        $nombre = $row['nombre'];
+        $idHotel = $row['idHoteles'];
+    }
+    $user['tipo'] = $tipo;
+    $user['nombre'] = $nombre;
+    $data['idHotel'] = $idHotel;
+    $data['cabecera'] = view('components/navbar', $user);
+   $data['pie'] = view('templates/footer');
+
+      }
+   return $data;
+
+    }
+
+    public function hotelesUser(){
+
+      $data = $this->tipoMenu();
+      
       return view('hoteles', $data);
   }
     public function validarHotel(){
@@ -101,4 +123,33 @@ class Hoteles extends BaseController
       
        return view('registro/hotel/verHotel', $data);
   }
+  public function AddTrabajador(){
+
+    $db = \Config\Database::connect();
+       session_start();
+       $tipo =  $_SESSION['tipo_user'];
+       $nombre = 'NN';
+       if($tipo==='hotel'){
+        $correo = $_SESSION['usuarioHotel'];
+
+        $sql = "SELECT nombre, idHoteles FROM hoteles WHERE usuario LIKE '$correo'";
+        $query = $db->query($sql);
+        $results = $query->getResultArray();
+    
+    foreach ($results as $row){
+        $nombre = $row['nombre'];
+        $idHotel = $row['idHoteles'];
+    }
+    $user['tipo'] = $tipo;
+    $user['nombre'] = $nombre;
+    $data['idHotel'] = $idHotel;
+    $data['cabecera'] = view('components/navbar', $user);
+   $data['pie'] = view('templates/footer');
+
+    return view('registro/hotel/AddTrabajador', $data);
+}
+}
+
+
+
 }

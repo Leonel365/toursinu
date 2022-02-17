@@ -1,0 +1,44 @@
+CRITICAL - 2022-02-14 09:24:46 --> ini_set(): Session ini settings cannot be changed when a session is active
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Sess...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\toursinu\system\Session\Handlers\FileHandler.php(71): ini_set('session.save_pa...', 'C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\Config\Services.php(570): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '127.0.0.1')
+#3 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#4 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#5 C:\xampp\htdocs\toursinu\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#6 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#7 C:\xampp\htdocs\toursinu\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(168): session()
+#9 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->validar_User()
+#10 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#11 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-02-14 09:24:50 --> Undefined array key "usuario"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Turistas.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 75)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Turistas->Reservas()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Turistas))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-14 09:28:49 --> Undefined array key "usuario"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 110)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->AddTrabajador()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-14 09:31:47 --> ini_set(): Session ini settings cannot be changed when a session is active
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Sess...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\toursinu\system\Session\Handlers\FileHandler.php(71): ini_set('session.save_pa...', 'C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\Config\Services.php(570): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '127.0.0.1')
+#3 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#4 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#5 C:\xampp\htdocs\toursinu\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#6 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#7 C:\xampp\htdocs\toursinu\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(168): session()
+#9 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->validar_User()
+#10 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#11 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}

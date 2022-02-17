@@ -1,0 +1,93 @@
+CRITICAL - 2022-02-17 10:20:26 --> Undefined array key "usuario"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 91)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->publicar('0')
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-17 10:21:09 --> ini_set(): Session ini settings cannot be changed when a session is active
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Sess...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\toursinu\system\Session\Handlers\FileHandler.php(71): ini_set('session.save_pa...', 'C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\Config\Services.php(570): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '127.0.0.1')
+#3 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#4 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#5 C:\xampp\htdocs\toursinu\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#6 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#7 C:\xampp\htdocs\toursinu\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(168): session()
+#9 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->validar_User()
+#10 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#11 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-02-17 10:21:13 --> Undefined array key "usuario"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 25)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->hotelesUser()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-17 10:21:24 --> Undefined array key "usuario"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 29)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->lugaresUser()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-17 10:21:34 --> Undefined array key "usuario"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 25)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->hotelesUser()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-17 10:39:15 --> Call to undefined function App\Controllers\tipoMenu()
+#0 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->hotelesUser()
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-17 10:44:05 --> Undefined array key "usuario"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 29)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->lugaresUser()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-17 11:38:04 --> Undefined variable $carousel
+#0 C:\xampp\htdocs\toursinu\app\Views\index.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 3)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('index', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Home.php(84): view('index', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Home->Home()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 11:49:19 --> Undefined variable $idHotel
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\hotel\verHotel.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 5)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/hotel/...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(127): view('registro/hotel/...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Hoteles->verHotel('3')
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Hoteles))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-17 11:53:29 --> ini_set(): Session ini settings cannot be changed when a session is active
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Sess...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\toursinu\system\Session\Handlers\FileHandler.php(71): ini_set('session.save_pa...', 'C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\Config\Services.php(570): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '127.0.0.1')
+#3 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#4 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#5 C:\xampp\htdocs\toursinu\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#6 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#7 C:\xampp\htdocs\toursinu\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(150): session()
+#9 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->validar_User()
+#10 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#11 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}

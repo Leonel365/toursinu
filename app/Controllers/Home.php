@@ -11,6 +11,7 @@ class Home extends BaseController
         $user['tipo'] = 'index';
         $data['cabecera'] = view('templates/cabecera', $user);
        $data['pie'] = view('templates/footer');
+     //  $data['carousel'] = view('components/carousel');
        
         return view('index', $data);
     }
