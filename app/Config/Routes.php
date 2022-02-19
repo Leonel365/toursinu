@@ -53,7 +53,11 @@ $routes->get('lugares/user', 'Lugares::lugaresUser');
 $routes->get('hoteles/user', 'Hoteles::hotelesUser');
 $routes->get('reservas/user', 'Turistas::Reservas');
 $routes->get('verHotel/(:num)', 'Hoteles::verHotel/$1');
-$routes->get('trabajadores/list', 'Hoteles::AddTrabajador');
+$routes->get('trabajadores/list/(:num)', 'Hoteles::AddTrabajador/$1');
+$routes->get('form/trabajador/(:num)', 'Trabajador::formAdd/$1');
+$routes->post('dataFormTra', 'Trabajador::validarForm');
+$routes->get('edit/trabajador/(:num)', 'Trabajador::formEdit/$1');
+$routes->post('update/trabajador', 'Trabajador::updateTrabajador');
 
 /*
  * --------------------------------------------------------------------

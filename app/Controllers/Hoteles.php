@@ -123,32 +123,14 @@ class Hoteles extends BaseController
       
        return view('registro/hotel/verHotel', $data);
   }
-  public function AddTrabajador(){
+  public function AddTrabajador($estado){
 
-    $db = \Config\Database::connect();
-       session_start();
-       $tipo =  $_SESSION['tipo_user'];
-       $nombre = 'NN';
-       if($tipo==='hotel'){
-        $correo = $_SESSION['usuarioHotel'];
-
-        $sql = "SELECT nombre, idHoteles FROM hoteles WHERE usuario LIKE '$correo'";
-        $query = $db->query($sql);
-        $results = $query->getResultArray();
-    
-    foreach ($results as $row){
-        $nombre = $row['nombre'];
-        $idHotel = $row['idHoteles'];
-    }
-    $user['tipo'] = $tipo;
-    $user['nombre'] = $nombre;
-    $data['idHotel'] = $idHotel;
-    $data['cabecera'] = view('components/navbar', $user);
-   $data['pie'] = view('templates/footer');
+    $data = $this->tipoMenu();
+    $data['update'] = $estado; 
 
     return view('registro/hotel/AddTrabajador', $data);
 }
-}
+
 
 
 
