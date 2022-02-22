@@ -7,7 +7,7 @@ if($update!=0){
   Swal.fire({
   position: 'top-end',
   icon: 'success',
-  title: 'Información actualizada',
+  title: 'Información guardada',
   showConfirmButton: false,
   timer: 2000
 })
@@ -43,22 +43,24 @@ if($update!=0){
  $cont = 1;
  $db = \Config\Database::connect();
 
- $sql  ="SELECT idEmpleado, e.idPersona as id, cargo, fecha_contratacion as fecha, p.primer_nombre as nombre, p.primer_apellido as apellido1, p.segundo_apellido as apellido2
+ $sql  ="SELECT idEmpleado, e.idPersona as id, p.estado as estado, cargo, fecha_contratacion as fecha, p.primer_nombre as nombre, p.primer_apellido as apellido1, p.segundo_apellido as apellido2
  FROM empleado as e, persona as p 
- WHERE idHoteles = $idHotel  AND e.idPersona = p.idPersona ";  
+ WHERE idHoteles = $idHotel  AND e.idPersona = p.idPersona";  
    $query = $db->query($sql);
     $results = $query->getResultArray();
 
     foreach ( $results as $hotel){
        $nombre = $hotel['nombre'];
-       $idPersona = $hotel['idEmpleado'];
+       $idPersona = $hotel['id'];
+       $idTrabaajdor = $hotel['idEmpleado'];
        $cargo = $hotel['cargo'];
        $fecha = $hotel['fecha'];
        $nombre = $hotel['nombre'];
        $apellido1 = $hotel['apellido1'];
        $apellido2 = $hotel['apellido2'];
+       $estado = $hotel['estado'];
 
-    
+    if($estado==0){
 
     ?>
 
@@ -71,13 +73,34 @@ if($update!=0){
       <td><?=$cargo?></td>
       <td><?=$fecha?></td>
       <td>
-          <a href="<?=Base_URL('edit/trabajador/'.$idPersona)?>" class="btn btn-success"><i class="bi bi-pencil-square"></i></a> 
-          <a href="#" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
+          <a href="<?=Base_URL('edit/trabajador/'.$idTrabaajdor)?>" class="btn btn-success"><i class="bi bi-pencil-square"></i></a> 
+          <a href="<?=Base_URL('eliminar/trabajador/'.$idPersona)?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
           
       </td>
     </tr>
     <?php
     $cont ++;
+    }else{
+      ?>
+
+
+<tr class="bg-danger">
+      <th scope="row"><?=$cont?></th>
+      <td><?=$nombre?></td>
+      <td><?=$apellido1?></td>
+      <td><?=$apellido2?></td>
+      <td><?=$cargo?></td>
+      <td><?=$fecha?></td>
+      <td>
+          <a href="<?=Base_URL('edit/trabajador/'.$idTrabaajdor)?>" class="btn btn-success"><i class="bi bi-pencil-square"></i></a> 
+          <a href="<?=Base_URL('habilitar/trabajador/'.$idPersona)?>" class="btn btn-primary"><i class="bi bi-unlock-fill"></i></a>
+          
+      </td>
+    </tr>
+    <?php
+    $cont ++;
+
+    }
     }
     ?>
   </tbody>
@@ -86,3 +109,5 @@ if($update!=0){
 
 </div>
 </div>
+
+<?=$pie?>

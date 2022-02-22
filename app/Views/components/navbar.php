@@ -64,6 +64,9 @@ if($tipo==='hotel')
 {
 ?>
       <li class="nav-item">
+        <a class="nav-link" href="<?=Base_url('empleado/habitaciones/0')?>"><b style="color:  #FDFEFE">Habitaciones</b></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="<?=Base_url('#')?>"><b style="color:  #FDFEFE">Reservas pendientes</b></a>
       </li>
       <li class="nav-item">

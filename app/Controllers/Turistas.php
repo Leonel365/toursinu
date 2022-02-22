@@ -43,7 +43,7 @@ class Turistas extends BaseController
 
         $password = sha1($contrasena1);
        
-       $sql = "INSERT INTO persona(primer_nombre, primer_apellido, segundo_apellido, usuario, contrasena, correo) VALUES ('$nombre','$apellido1','$apellido2','$correo','$password','$correo')";
+       $sql = "INSERT INTO persona(primer_nombre, primer_apellido, segundo_apellido, usuario, contrasena, correo, estado) VALUES ('$nombre','$apellido1','$apellido2','$correo','$password','$correo', '0')";
        $query = $db->query($sql);
 
        $sql = "SELECT MAX(idPersona) as id FROM persona ";

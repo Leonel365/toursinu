@@ -53,12 +53,21 @@ $routes->get('lugares/user', 'Lugares::lugaresUser');
 $routes->get('hoteles/user', 'Hoteles::hotelesUser');
 $routes->get('reservas/user', 'Turistas::Reservas');
 $routes->get('verHotel/(:num)', 'Hoteles::verHotel/$1');
+$routes->get('verHotelUser/(:num)', 'Hoteles::verHotelUser/$1');
 $routes->get('trabajadores/list/(:num)', 'Hoteles::AddTrabajador/$1');
 $routes->get('form/trabajador/(:num)', 'Trabajador::formAdd/$1');
 $routes->post('dataFormTra', 'Trabajador::validarForm');
+$routes->post('dataFormHab', 'Trabajador::validarFormHab');
 $routes->get('edit/trabajador/(:num)', 'Trabajador::formEdit/$1');
 $routes->post('update/trabajador', 'Trabajador::updateTrabajador');
-
+$routes->get('eliminar/trabajador/(:num)', 'Trabajador::eliminarTrabajador/$1');
+$routes->get('habilitar/trabajador/(:num)', 'Trabajador::habilitarTrabajador/$1');
+$routes->get('empleado/habitaciones/(:num)', 'Hoteles::habitacionesEmpleado/$1');
+$routes->get('form/habitacion/(:num)', 'Hoteles::formAddHabitacion/$1');
+$routes->get('edit/habitacion/(:num)', 'Trabajador::formEditHab/$1');
+$routes->post('editFormHab', 'Trabajador::editHabitacion');
+$routes->get('eliminar/habitacion/(:num)', 'Trabajador::eliminarHabitacion/$1');
+$routes->get('habilitar/habitacion/(:num)', 'Trabajador::habilitarHabitacion/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
