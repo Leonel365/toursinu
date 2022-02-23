@@ -1,0 +1,272 @@
+CRITICAL - 2022-02-22 10:25:54 --> ini_set(): Session ini settings cannot be changed when a session is active
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Sess...', 'C:\\xampp\\htdocs...', 71)
+#1 C:\xampp\htdocs\toursinu\system\Session\Handlers\FileHandler.php(71): ini_set('session.save_pa...', 'C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\Config\Services.php(570): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '127.0.0.1')
+#3 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#4 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(189): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#5 C:\xampp\htdocs\toursinu\system\Config\Services.php(563): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#6 C:\xampp\htdocs\toursinu\system\Config\BaseService.php(248): CodeIgniter\Config\Services::session()
+#7 C:\xampp\htdocs\toursinu\system\Common.php(901): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#8 C:\xampp\htdocs\toursinu\app\Controllers\Lugares.php(150): session()
+#9 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Lugares->validar_User()
+#10 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Lugares))
+#11 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2022-02-22 13:17:49 --> Undefined variable $habitacion
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(272): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 272)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->calcularPrecio('143500')
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-22 13:20:20 --> Undefined variable $results
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(271): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 271)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->calcularPrecio('143500')
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-22 13:20:54 --> Undefined variable $precio
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(279): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 279)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->calcularPrecio('143500')
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-22 13:21:26 --> Undefined variable $foto
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\formReserva.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 22)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(283): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->calcularPrecio('4')
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 13:27:32 --> Class "Hoteles" not found
+#0 C:\xampp\htdocs\toursinu\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#3 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(263): view('registro/emplea...', Array)
+#4 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->reservaUser('3')
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2022-02-22 13:49:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR - 2022-02-22 13:49:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR - 2022-02-22 13:49:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+CRITICAL - 2022-02-22 16:09:27 --> Undefined array key "tipo"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(269): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 269)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->addReserva()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-22 16:14:06 --> Undefined array key "idPersona"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(280): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 280)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->addReserva()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-22 19:09:25 --> Undefined variable $db
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(283): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 283)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->addReserva()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-02-22 19:10:00 --> Cannot add or update a child row: a foreign key constraint fails (`toursinu`.`reservas`, CONSTRAINT `reservas_ibfk_1` FOREIGN KEY (`idTurista`) REFERENCES `turista` (`idTurista`) ON UPDATE CASCADE)
+ERROR - 2022-02-22 19:10:00 --> Cannot add or update a child row: a foreign key constraint fails (`toursinu`.`pagos`, CONSTRAINT `pagos_ibfk_1` FOREIGN KEY (`idReservas`) REFERENCES `reservas` (`idReservas`) ON UPDATE CASCADE)
+ERROR - 2022-02-22 19:13:07 --> Cannot add or update a child row: a foreign key constraint fails (`toursinu`.`reservas`, CONSTRAINT `reservas_ibfk_1` FOREIGN KEY (`idTurista`) REFERENCES `turista` (`idTurista`) ON UPDATE CASCADE)
+ERROR - 2022-02-22 19:13:07 --> Cannot add or update a child row: a foreign key constraint fails (`toursinu`.`pagos`, CONSTRAINT `pagos_ibfk_1` FOREIGN KEY (`idReservas`) REFERENCES `reservas` (`idReservas`) ON UPDATE CASCADE)
+ERROR - 2022-02-22 19:23:54 --> Cannot add or update a child row: a foreign key constraint fails (`toursinu`.`pagos`, CONSTRAINT `pagos_ibfk_2` FOREIGN KEY (`idEmpleado`) REFERENCES `empleado` (`idEmpleado`) ON UPDATE CASCADE)
+CRITICAL - 2022-02-22 19:45:41 --> Undefined variable $foto
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\formReserva.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 22)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(263): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->reservaUser('4')
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 19:48:40 --> Undefined variable $foto
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\formReserva.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 22)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(263): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->reservaUser('4')
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 19:48:55 --> Undefined variable $foto
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\formReserva.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 22)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(263): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->reservaUser('1')
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 19:49:11 --> Undefined variable $foto
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\formReserva.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 22)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(263): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->reservaUser('4')
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 19:50:13 --> Undefined variable $foto
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\formReserva.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 22)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(263): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->reservaUser('1')
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 19:50:21 --> Undefined variable $foto
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\formReserva.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 22)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(263): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->reservaUser('4')
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 19:50:36 --> Undefined variable $foto
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\formReserva.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 22)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(263): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->reservaUser('4')
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 19:58:28 --> Undefined array key "tipo_user"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 22)
+#1 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(259): App\Controllers\Hoteles->tipoMenu()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->reservaUser('3')
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#4 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-22 20:01:22 --> Undefined variable $idHabitacion
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\formReserva.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 5)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(272): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->reserva('3')
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 20:02:02 --> Undefined array key "tipo_user"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 22)
+#1 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(282): App\Controllers\Hoteles->tipoMenu()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->addReserva()
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#4 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-22 20:05:12 --> Undefined array key "tipo_user"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 22)
+#1 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(283): App\Controllers\Hoteles->tipoMenu()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->addReserva()
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#4 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-22 20:05:31 --> Undefined array key "usuario"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 27)
+#1 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(283): App\Controllers\Hoteles->tipoMenu()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->addReserva()
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#4 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-22 20:08:07 --> Undefined array key "usuario"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Hoteles.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 30)
+#1 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(283): App\Controllers\Hoteles->tipoMenu()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->addReserva()
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#4 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-02-22 20:08:32 --> Undefined array key "tipo"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(284): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 284)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->addReserva()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-22 20:13:09 --> Undefined array key "tipo"
+#0 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(284): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 284)
+#1 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->addReserva()
+#2 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#3 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-22 20:15:04 --> Undefined variable $cabecera
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\formReserva.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 3)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(263): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->reservaUser('3')
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 20:17:44 --> Undefined variable $cabecera
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\formReserva.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 3)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(263): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->reservaUser('3')
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 20:45:59 --> Undefined variable $update
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\reservas.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 4)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(339): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->mosReservas()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-02-22 21:03:39 --> Undefined array key "tipo"
+#0 C:\xampp\htdocs\toursinu\app\Views\registro\empleado\reservas.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 33)
+#1 C:\xampp\htdocs\toursinu\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\toursinu\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\toursinu\system\Common.php(1089): CodeIgniter\View\View->render('registro/emplea...', Array, true)
+#4 C:\xampp\htdocs\toursinu\app\Controllers\Trabajador.php(339): view('registro/emplea...', Array)
+#5 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(825): App\Controllers\Trabajador->mosReservas()
+#6 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Trabajador))
+#7 C:\xampp\htdocs\toursinu\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\toursinu\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

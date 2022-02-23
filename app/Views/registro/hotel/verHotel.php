@@ -25,8 +25,8 @@ echo $cabecera;
 <p><br><br></p>
     <div class="row">
         <div class="col-sm">
-        <img src="<?=Base_URL()?>/catalogoH/<?php echo $foto;?>" class="img-fluid" class="img-circle"alt="...">
-        </div>
+        <img src="<?=Base_URL()?>/catalogoH/<?php echo $foto;?>" class="img-fluid" class="img-circle"alt="...">   
+    </div>
 
         <div class="col-sm">
            <div class="text-center"><h3 style="color: #36907A">Descripción del hotel</h3></div>
@@ -51,8 +51,61 @@ echo $cabecera;
             <div class="col-sm">
             <div class="text-center"> <h3 style="color: #36907A">Habitaciones Disponibles</h3></div>
             </div>
+    </div>
+    <?php
+
+$sql = "SELECT idHabitaciones, idHoteles, precio, descripcion, tipo, estado, foto FROM habitaciones WHERE idHoteles = $idHotel";
+$query = $db->query($sql);
+$results = $query->getResultArray();
+$open = 3;
+$close = 0;
+$foto = "1";
+
+
+foreach ( $results as $hotel){
+    if($open === 3){
+        echo "<p><br></p>";
+        echo "<div class = 'row'>";
+         $open = 0;
+
+    }
+
+    $foto = $hotel['foto'];
+    $idHabitacion = $hotel['idHabitaciones'];
+?>
+
+
+    <div class="col-4">
+     <div class="card" style="width: 18rem;">
+        <img src="<?=Base_URL()?>/catalogoH/<?php echo $foto;?>" class="card-img-top" height="270"  alt="...">
+        <div class="card-body">
+            <div class="text-center"><h5 class="card-title" ><?=$hotel['tipo']?></h5></div>
+            <p class="card-text" style = "text-align: justify;"><?php echo substr($hotel['descripcion'], 0, 150)." ..."; ?></p>
+            <a href="<?=Base_URL('empleado/res/'.$idHabitacion)?>"  class="btn btn-primary btn-block">Conocer más</a>
+        </div>
+        </div>
 
     </div>
+
+   
+
+
+<?php
+$close++;
+if($close === 3){
+echo "</div>";
+$close = 0;
+
+}
+$open ++;
+
+}
+if($close !== 3){
+echo "</div>";
+}
+?>
+
+ 
 
 <p><br></p>
 <?=$pie?>

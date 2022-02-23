@@ -22,6 +22,11 @@ class Hoteles extends BaseController
       $tipo =  $_SESSION['tipo_user'];
       $nombre = 'NN';
       $bandera = 0;
+      $data['reserva'] = "si";
+      if($tipo==='nn'){
+        $data['tipo']  = "nn";
+        $break;
+      }else
       if($tipo!=='hotel'){
           $correo = $_SESSION['usuario'];
           $sql = "SELECT CONCAT(primer_nombre, ' ', primer_apellido) as nombre, idPersona FROM persona WHERE correo like '$correo'";
@@ -57,8 +62,8 @@ class Hoteles extends BaseController
       $data['idEmpleado'] = $idTrabajador;
       $data['idHotel'] = $idHotel;
     }
-
-
+      $data['idPersona'] = $idPersona;
+      $data['tipo']  = $tipo;
       $user['tipo'] = $tipo;
       $user['nombre'] = $nombre;
       $data['cabecera'] = view('components/navbar', $user);
@@ -160,7 +165,7 @@ class Hoteles extends BaseController
    $data['idHotel'] = $id;
 
     
-     return view('registro/hotel/verHotel', $data);
+     return view('registro/hotel/verHotelUser', $data);
 }
   public function AddTrabajador($estado){
 

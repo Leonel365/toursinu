@@ -11,9 +11,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link type="text/css" rel="stylesheet" href="css/lg-zoom.css" />
+    <link type="text/css" rel="stylesheet" href="css/lg-thumbnail.css" />
     <title>TourSinú</title>
 </head>
 <body>
+<script src="js/lightgallery.umd.js"></script>
+
+    <script src="js/plugins/lg-thumbnail.umd.js"></script>
+    <script src="js/plugins/lg-zoom.umd.js"></script>
+
     <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #36907A">
 <a class="navbar-brand" href="<?=Base_url('home')?>">
     <img src="<?=Base_url()?>/photo/logo.png" width="100px" height="30" alt="TourSinú">
@@ -67,7 +74,7 @@ if($tipo==='hotel')
         <a class="nav-link" href="<?=Base_url('empleado/habitaciones/0')?>"><b style="color:  #FDFEFE">Habitaciones</b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?=Base_url('#')?>"><b style="color:  #FDFEFE">Reservas pendientes</b></a>
+        <a class="nav-link" href="<?=Base_url('reservas')?>"><b style="color:  #FDFEFE">Reservas pendientes</b></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="<?=Base_url('#')?>"><b style="color:  #FDFEFE">Reservas aprobadas</b></a>

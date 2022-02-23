@@ -62,7 +62,7 @@ if($update!=0){
       <th scope="row"><?=$cont?></th>
       <td><?=$tipo?></td>
       <td><?=$precio?></td>
-      <td><?=$descripcion?></td>
+      <td><?php echo substr($descripcion, 0, 70)." ..."; ?></td>
       <td>
           <a href="<?=Base_URL('edit/habitacion/'.$idHabitacion)?>" class="btn btn-success"><i class="bi bi-pencil-square"></i></a> 
           <a href="<?=Base_URL('eliminar/habitacion/'.$idHabitacion)?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
@@ -79,7 +79,7 @@ if($update!=0){
       <th scope="row"><?=$cont?></th>
       <td><?=$tipo?></td>
       <td><?=$precio?></td>
-      <td><?=$descripcion?></td>
+      <td><?php echo substr($descripcion, 0, 70)." ..."; ?></td>
       <td>
           <a href="<?=Base_URL('edit/habitacion/'.$idHabitacion)?>" class="btn btn-success"><i class="bi bi-pencil-square"></i></a> 
           <a href="<?=Base_URL('habilitar/habitacion/'.$idHabitacion)?>" class="btn btn-primary"><i class="bi bi-unlock-fill"></i></a>

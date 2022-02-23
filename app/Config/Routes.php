@@ -68,6 +68,11 @@ $routes->get('edit/habitacion/(:num)', 'Trabajador::formEditHab/$1');
 $routes->post('editFormHab', 'Trabajador::editHabitacion');
 $routes->get('eliminar/habitacion/(:num)', 'Trabajador::eliminarHabitacion/$1');
 $routes->get('habilitar/habitacion/(:num)', 'Trabajador::habilitarHabitacion/$1');
+$routes->get('empleado/reservar/(:num)', 'Trabajador::reservaUser/$1');
+$routes->get('empleado/res/(:num)', 'Trabajador::reserva/$1');
+$routes->post('addReserva', 'Trabajador::addReserva');
+$routes->get('reservas', 'Trabajador::mosReservas');
+$routes->get('inspeccionar/reserva/(:num)', 'Trabajador::inspeccionar/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

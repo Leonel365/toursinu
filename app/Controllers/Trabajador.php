@@ -235,9 +235,9 @@ class Trabajador extends BaseController
         <script>
         window.parent.location="<?=Base_url('trabajadores/list/2')?>";
        </script> 
-   <?php
-      
+   <?php  
     }
+
     public function habilitarHabitacion($idHabitacion){
            
         $db = \Config\Database::connect();
@@ -253,6 +253,103 @@ class Trabajador extends BaseController
       
     }
     
+    public function reservaUser($habitacion){
+        
+        $menu = new Hoteles();
+        $data = $menu->tipoMenu();
+        $data['idHabitacion'] = $habitacion;
+        $data['precioH'] = 0;
 
+        return view('registro/empleado/formReserva', $data);
+    }
+    public function reserva($habitacion){
+        session_start();
+        $tipo = "index";     
+        $user['tipo'] = $tipo;
+        $data['idHabitacion'] = $habitacion;
+        $data['precioH'] = 0;
+        $_SESSION['tipo_user']="nn";
+        $data['cabecera'] = view('templates/cabecera', $user);
+       $data['pie'] = view('templates/footer');
+ 
+        return view('registro/empleado/formReserva', $data);
+    }
+
+    public function addReserva(){
+
+        $db = \Config\Database::connect();
+       
+        $menu = new Hoteles();
+        $data = $menu->tipoMenu();
+        $tipo = $data['tipo'];
+        $idHabitacion = $this->request->getVar('idHabitacion');
+        $dias = $this->request->getVar('dias');
+        $cantidad = $this->request->getVar('valor');
+        $idReserva = 0;
+        $fecha = date('Y-m-d-H-i-s');
+
+        $imagen=$this->request->getFile('imagen');
+        $nuevoNombre= $imagen->getRandomName();
+        $imagen->move('../public/catalogoH/',$nuevoNombre);
+
+        if($tipo==="turista"){
+            $idCliente = $data['idPersona'];
+           
+                $sql = "INSERT INTO reservas(idTurista, idHabitaciones, fecha_reserva, estado, dias) VALUES ('$idCliente','$idHabitacion','$fecha','pendiente', '$dias')";
+                $query = $db->query($sql);
+
+                $sql = "SELECT MAX(idReservas) as id FROM reservas";
+                $query = $db->query($sql);
+                $results = $query->getResultArray();
+                
+                foreach ($results as $row){
+                    $idReserva = $row['id'];
+                }
+
+                $sql = "INSERT INTO pagos(idEmpleado, idReservas, estado, fecha_pago, cantidad, comprobante) VALUES ('','$idReserva','pendiente','$fecha','$cantidad','$nuevoNombre')";
+                $query = $db->query($sql);
+
+                
+    }if($tipo==="nn"){
+        ?>        
+        <script>
+             alert('Solo puede reservar iniciando sesión en el rol turista')
+             window.parent.location="<?=Base_url('empleado/res/'.$idHabitacion)?>";
+       </script> 
+   <?php
+    }
+    else{
+        ?>        
+        <script>
+             alert('Solo puede reservar iniciando sesión en el rol turista')
+             window.parent.location="<?=Base_url('empleado/reservar/'.$idHabitacion)?>";
+       </script> 
+   <?php
+    }
+
+    }
+
+    public function mosReservas(){
+        
+        $db = \Config\Database::connect();
+
+        $menu = new Hoteles();
+        $data = $menu->tipoMenu();
+      
+
+        return view('registro/empleado/reservas', $data);
+    }
+
+    public function inspeccionar($idReserva){
+        
+        $db = \Config\Database::connect();
+
+        $menu = new Hoteles();
+        $data = $menu->tipoMenu();
+        $data['reservaId'] = $idReserva; 
+      
+
+        return view('registro/empleado/inspeccionar', $data);
+    }
   
 }
