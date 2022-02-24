@@ -3,7 +3,7 @@
  $cont = 1;
  $db = \Config\Database::connect();
 
- $sql  ="SELECT idReservas, idTurista, fecha_reserva, idHabitaciones, dias, estado FROM reservas WHERE estado like 'pendiente' and idHabitaciones IN (SELECT idHabitaciones FROM habitaciones WHERE idHoteles = $idHotel) ";  
+ $sql  ="SELECT idReservas, idTurista, fecha_reserva, idHabitaciones, dias, estado FROM reservas WHERE idReservas = $reservaId  and idHabitaciones IN (SELECT idHabitaciones FROM habitaciones WHERE idHoteles = $idHotel)";  
    $query = $db->query($sql);
     $results = $query->getResultArray();
 
@@ -22,6 +22,13 @@
    foreach ($x as $row){
        $idPersona = $row['idPersona'];
    }
+        $sql = "SELECT idPersona FROM empleado WHERE idEmpleado = $idEmpleado";
+        $query = $db->query($sql);
+        $x = $query->getResultArray();
+
+        foreach ($x as $row){
+        $idPersonaE = $row['idPersona'];
+        }
 
         $sql = "SELECT cantidad, comprobante, idPagos FROM pagos WHERE idReservas =  $idReserva";
         $query = $db->query($sql);
@@ -49,6 +56,21 @@
        $nombre = $row['nombre'];
    }
 
+   $sql = "SELECT CONCAT(primer_nombre, ' ', primer_apellido, ' ', segundo_apellido) as nombre FROM persona WHERE idPersona = $idPersonaE";
+   $query = $db->query($sql);
+   $y = $query->getResultArray();
+
+    foreach ($y as $row){
+    $nomEmpleado = $row['nombre'];
+    }
+
+    $sql = "SELECT mensaje FROM mensaje WHERE idPago = $idpago";
+    $query = $db->query($sql);
+    $y = $query->getResultArray();
+ 
+    foreach ($y as $row){
+        $mensaje = $row['mensaje'];
+    }
 
     ?>
 
@@ -89,11 +111,29 @@
                 <div class ="col-sm">
                     <p> <h5 style="color: #36907A">Estado de la reserva</h5><?=$estado?></p> 
                 </div>
-                <div class ="col-sm">
-                    <p> <h5 style="color: #36907A">Opciones</h5></p>
-                    <a class="btn btn-danger" href="<?=Base_URL('denegar/'.$idpago)?>" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Denegar</a>
-                    <a href="<?=Base_URL('aprobar/'.$idpago)?>" class="btn btn-success">Aprobar</a>
+           </div>
+
+           <div class="row">
+               
+                <?php if($estado ==='denegado' ){
+                
+                ?>
+                 <div class ="col-sm">
+                    <p> <h5 style="color: #36907A">Atendido por</h5><?=$nomEmpleado?></p> 
                 </div>
+                 <div class ="col-sm">
+                    <p> <h5 style="color: #36907A">Mensaje</h5><?=$mensaje?></p> 
+                </div>
+                
+                <?php }?>
+                <?php if($estado ==='aprobado' ){
+                
+                ?>
+                 <div class ="col-sm">
+                    <p> <h5 style="color: #36907A">Atendido por</h5><?=$nomEmpleado?></p> 
+                </div>
+                
+                <?php }?>
            </div>
 
     </div>

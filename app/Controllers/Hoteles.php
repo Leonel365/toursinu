@@ -28,6 +28,7 @@ class Hoteles extends BaseController
         $break;
       }else
       if($tipo!=='hotel'){
+          $data['tipo']  = $tipo;
           $correo = $_SESSION['usuario'];
           $sql = "SELECT CONCAT(primer_nombre, ' ', primer_apellido) as nombre, idPersona FROM persona WHERE correo like '$correo'";
           $query = $db->query($sql);
@@ -63,7 +64,6 @@ class Hoteles extends BaseController
       $data['idHotel'] = $idHotel;
     }
       $data['idPersona'] = $idPersona;
-      $data['tipo']  = $tipo;
       $user['tipo'] = $tipo;
       $user['nombre'] = $nombre;
       $data['cabecera'] = view('components/navbar', $user);

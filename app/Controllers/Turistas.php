@@ -67,29 +67,24 @@ class Turistas extends BaseController
 
     public function Reservas()
     {
+        $db = \Config\Database::connect();
 
-       $db = \Config\Database::connect();
-       session_start();
-       $tipo = "index";
-       $nombre = 'NN';
-       if($_SESSION['usuario']!= '0'){
-           $correo = $_SESSION['usuario'];
-           $tipo = $_SESSION['tipo_user'];
-           $sql = "SELECT CONCAT(primer_nombre, ' ', primer_apellido) as nombre FROM persona WHERE correo like '$correo'";
-           $query = $db->query($sql);
-           $results = $query->getResultArray();
-       
-       foreach ($results as $row){
-           $nombre = $row['nombre'];
-       }
-       }
-    
-       $user['tipo'] = $tipo;
-       $user['nombre'] = $nombre;
-       $data['cabecera'] = view('components/navbar', $user);
-      $data['pie'] = view('templates/footer');
+        $menu = new Hoteles();
+        $data = $menu->tipoMenu();
 
         return view('registro/turista/reservas', $data);
+    }
+
+    public function inspeccionar($idReserva){
+        
+        $db = \Config\Database::connect();
+
+        $menu = new Hoteles();
+        $data = $menu->tipoMenu();
+        $data['reservaId'] = $idReserva; 
+      
+
+        return view('registro/turista/inspeccionar', $data);
     }
 
 }

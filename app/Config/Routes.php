@@ -73,6 +73,12 @@ $routes->get('empleado/res/(:num)', 'Trabajador::reserva/$1');
 $routes->post('addReserva', 'Trabajador::addReserva');
 $routes->get('reservas', 'Trabajador::mosReservas');
 $routes->get('inspeccionar/reserva/(:num)', 'Trabajador::inspeccionar/$1');
+$routes->get('aprobar/(:num)', 'Trabajador::aprobar/$1');
+$routes->post('denegar', 'Trabajador::denegar');
+$routes->get('reservasA', 'Trabajador::mosReservasA');
+$routes->get('inspeccionar/reservasA/(:num)', 'Trabajador::inspeccionarA/$1');
+$routes->get('inspeccionar/user/(:num)', 'Turistas::inspeccionar/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

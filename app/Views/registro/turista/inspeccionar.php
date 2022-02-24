@@ -3,7 +3,7 @@
  $cont = 1;
  $db = \Config\Database::connect();
 
- $sql  ="SELECT idReservas, idTurista, fecha_reserva, idHabitaciones, dias, estado FROM reservas WHERE estado like 'pendiente' and idHabitaciones IN (SELECT idHabitaciones FROM habitaciones WHERE idHoteles = $idHotel) ";  
+ $sql  ="SELECT idReservas, idTurista, fecha_reserva, idHabitaciones, dias, estado FROM reservas WHERE idReservas = $reservaId";  
    $query = $db->query($sql);
     $results = $query->getResultArray();
 
@@ -15,13 +15,14 @@
        $dias = $hotel['dias'];
        $estado = $hotel['estado'];
 
-       $sql = "SELECT idPersona FROM turista WHERE idTurista = $idTurista";
+       $sql = "SELECT nombre FROM hoteles WHERE idHoteles in (SELECT idHoteles FROM habitaciones where idHabitaciones = $idHabitacion)";
        $query = $db->query($sql);
        $x = $query->getResultArray();
    
    foreach ($x as $row){
-       $idPersona = $row['idPersona'];
+       $nombreHotel = $row['nombre'];
    }
+        
 
         $sql = "SELECT cantidad, comprobante, idPagos FROM pagos WHERE idReservas =  $idReserva";
         $query = $db->query($sql);
@@ -50,6 +51,15 @@
    }
 
 
+    $sql = "SELECT mensaje, contacto FROM mensaje WHERE idPago = $idpago";
+    $query = $db->query($sql);
+    $y = $query->getResultArray();
+ 
+    foreach ($y as $row){
+        $mensaje = $row['mensaje'];
+        $contacto = $row['contacto'];
+    }
+
     ?>
 
 <div class="row">
@@ -70,7 +80,7 @@
            <br>
            <div class ="row">
                 <div class ="col-sm">
-                    <p> <h5 style="color: #36907A">Nombre del cliente</h5><?=$nombre?></p> 
+                    <p> <h5 style="color: #36907A">Nombre del Hotel</h5><?=$nombreHotel?></p> 
                 </div>
 
                 <div class ="col-sm">
@@ -89,11 +99,21 @@
                 <div class ="col-sm">
                     <p> <h5 style="color: #36907A">Estado de la reserva</h5><?=$estado?></p> 
                 </div>
-                <div class ="col-sm">
-                    <p> <h5 style="color: #36907A">Opciones</h5></p>
-                    <a class="btn btn-danger" href="<?=Base_URL('denegar/'.$idpago)?>" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Denegar</a>
-                    <a href="<?=Base_URL('aprobar/'.$idpago)?>" class="btn btn-success">Aprobar</a>
+                
+           </div>
+
+           <div class="row">
+                <?php if($estado ==='denegado'){
+                
+                ?>
+                 <div class ="col-sm">
+                    <p> <h5 style="color: #36907A">Mensaje</h5><?=$mensaje?></p> 
                 </div>
+                <div class ="col-sm">
+                    <p> <h5 style="color: #36907A">Contacto</h5><?=$contacto?></p> 
+                </div>
+                
+                <?php }?>
            </div>
 
     </div>
@@ -102,38 +122,10 @@
 
 </div>
 
-<div>
+
 
        <p><br></p>
 
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-           <p class="text-center">Detalle los motivos por los cuales la reserva es denegada y un medio de comunicación <br><br></p>
-                    <form name="calc" method="POST" action="<?=Base_url('denegar')?>" enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="col-md">
-                                <label for="tipo">Mensaje:</label>
-                                <input type="hidden" name="idPago" value = "<?=$idpago?>">
-                                <textarea name="mensaje" id="mensaje" required cols="30" class="form-control" rows="5"></textarea>
-                            </div>
-                            <div class="col-md">
-                                <label for="contacto">Tel. Contacto:</label>
-                                <input type="text" name="contacto"  required  class="form-control" id="contacto">
-                            </div>
-                           
-                            <div class="col-md"> 
-                            <br>
-                          
-                                <input type="submit" class="btn btn-success" id="boton" style="color:#FFFFFF" value="Confirmar">
-                            </div> 
-                        </div>
-            
-                        
-                    </form>
-           
-        </div>
-    </div>
-</div>
 
 <script src ="<?=Base_URL()?>/style.js"> </script>
 

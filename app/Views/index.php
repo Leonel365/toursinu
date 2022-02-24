@@ -11,13 +11,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="<?=Base_url()?>/catalogo/10.png" height="350" class="d-block w-100" alt="...">
+      <img src="<?=Base_url()?>/catalogo/malecon.jpg" height="350" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="<?=Base_url()?>/catalogo/10.png" height="350" class="d-block w-100" alt="...">
+      <img src="<?=Base_url()?>/catalogo/rio.jpg" height="350" class="d-block w-100" alt="...">
      </div>
     <div class="carousel-item">
-      <img src="<?=Base_url()?>/catalogo/10.png" height="350" class="d-block w-100" alt="...">
+      <img src="<?=Base_url()?>/catalogo/manuel.jpeg" height="350" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">

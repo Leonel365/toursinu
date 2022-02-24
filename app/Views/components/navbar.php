@@ -11,20 +11,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link type="text/css" rel="stylesheet" href="css/lg-zoom.css" />
-    <link type="text/css" rel="stylesheet" href="css/lg-thumbnail.css" />
+    <link rel="stylesheet" href="venobox/venobox.min.css" type="text/css" media="screen" />
     <title>TourSinú</title>
 </head>
 <body>
-<script src="js/lightgallery.umd.js"></script>
 
-    <script src="js/plugins/lg-thumbnail.umd.js"></script>
-    <script src="js/plugins/lg-zoom.umd.js"></script>
+<script type="text/javascript" src="venobox/venobox.min.js"></script>
 
     <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #36907A">
-<a class="navbar-brand" href="<?=Base_url('home')?>">
+    <a class="navbar-brand" href="<?=Base_url('home')?>">
     <img src="<?=Base_url()?>/photo/logo.png" width="100px" height="30" alt="TourSinú">
-  </a>
+    </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -57,12 +54,12 @@
 if($tipo==='hotel')
 {
 ?>
-<li class="nav-item">
-<a class="nav-link" href="<?=Base_url('hoteles/reservas')?>"><b style="color:  #FDFEFE">Reservas</b></a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="<?=Base_url('trabajadores/list/0')?>"><b style="color:  #FDFEFE">Trabajadores</b></a>
-</li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?=Base_url('hoteles/reservas')?>"><b style="color:  #FDFEFE">Reservas</b></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?=Base_url('trabajadores/list/0')?>"><b style="color:  #FDFEFE">Trabajadores</b></a>
+    </li>
 
 <?php
 }
@@ -77,13 +74,13 @@ if($tipo==='hotel')
         <a class="nav-link" href="<?=Base_url('reservas')?>"><b style="color:  #FDFEFE">Reservas pendientes</b></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?=Base_url('#')?>"><b style="color:  #FDFEFE">Reservas aprobadas</b></a>
+        <a class="nav-link" href="<?=Base_url('reservasA')?>"><b style="color:  #FDFEFE">Reservas</b></a>
       </li>
 
       <?php
 }
 ?>
-      </ul>
+    </ul>
      
     
   
@@ -92,10 +89,10 @@ if($tipo==='hotel')
 ?>
     <a class="nav-link" href="<?=Base_url('login')?>">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" style="color: #FDFEFE">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-</svg>
-      </a>
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+      </svg>
+    </a>
 
       <?php
    }else{
@@ -104,10 +101,10 @@ if($tipo==='hotel')
      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" style="color: #FDFEFE">
-      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-    </svg>
-          </a>
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+         </svg>
+        </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#"><?php echo $nombre;?></a>
           <div class="dropdown-divider"></div>
@@ -122,10 +119,10 @@ if($tipo==='hotel')
       <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search" name="buscar" >
       <button class="btn btn-outline-light" type="submit">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" style="color: #FDFEFE">
-      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
         </svg>
-</button>
-    </form> 
+      </button>
+</form> 
   </div>
 </nav>
 

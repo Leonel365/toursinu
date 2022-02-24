@@ -2,7 +2,7 @@
 <p><br><br><br></p>
 
     <div class="text-center">
-        <h3 style="color: #36907A">Lista de reservas por aprobar</h3>
+        <h3 style="color: #36907A">Lista de reservas por validar</h3>
     </div>
 <p><br></p>
 <div class="row">
@@ -78,9 +78,7 @@
       <td><?="$ ".$cantidad?></td>
       <td><?=$fecha?></td>
       <td>
-          <a href="<?=Base_URL('inspeccionar/reserva/'.$idHabitacion)?>" class="btn btn-success"><i class="bi bi-eye"></i></a> 
-          <a href="<?=Base_URL('descartar/reserva/'.$idHabitacion)?>" class="btn btn-danger"><i class="bi bi-trash-fill"></i></a>
-          
+          <a href="<?=Base_URL('inspeccionar/reserva/'.$idHabitacion)?>" class="btn btn-success"><i class="bi bi-eye"></i></a>           
       </td>
     </tr>
     <?php
@@ -93,7 +91,7 @@
   </tbody>
 </table>
 
-
+<p><br><br></p>
 </div>
 </div>
 

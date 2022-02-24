@@ -10,6 +10,13 @@ $cabecera;
 
 
     foreach ( $results as $places){
+        $id = $places['idLugares'];
+        $sql = "SELECT foto FROM catalogo_lugar WHERE idLugares = $id";
+        $query = $db->query($sql);
+        $results = $query->getResultArray();
+        foreach ( $results as $row){
+
+$foto = $row['foto'];
         if($open === 3){
             echo "<p><br></p>";
             echo "<div class = 'row'>";
@@ -21,7 +28,7 @@ $cabecera;
 
         <div class="col-4">
          <div class="card" style="width: 18rem;">
-            <img src="<?=Base_URL()?>/catalogo/1.png" class="card-img-top" alt="...">
+            <img src="<?=Base_URL()?>/catalogo/<?php echo $foto;?>" height="270"  class="card-img-top" alt="...">
             <div class="card-body">
                 <div class="text-center"><h5 class="card-title" ><?=$places['Nombre']?></h5></div>
                 <p class="card-text" style = "text-align: justify;"><?php echo substr($places['Descripcion'], 0, 150)." ..."; ?></p>
@@ -35,6 +42,7 @@ $cabecera;
 
 
 <?php
+        
  $close++;
   if($close === 3){
     echo "</div>";
@@ -44,6 +52,7 @@ $cabecera;
     $open ++;
    
     }
+}
     if($close !== 3){
     echo "</div>";
     }

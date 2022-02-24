@@ -2,7 +2,7 @@
 <p><br><br><br></p>
 
     <div class="text-center">
-        <h3 style="color: #36907A">Mis reservas</h3>
+        <h3 style="color: #36907A">Lista de reservas</h3>
     </div>
 <p><br></p>
 <div class="row">
@@ -11,7 +11,7 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Hotel</th>
+      <th scope="col">Cliente</th>
       <th scope="col">Tipo Habitación</th>
       <th scope="col">Tiempo hospedaje</th>
       <th scope="col">Total (COP)</th>
@@ -26,7 +26,7 @@
  $cont = 1;
  $db = \Config\Database::connect();
 
- $sql  ="SELECT idReservas, idTurista, fecha_reserva, idHabitaciones, dias, estado FROM reservas WHERE idTurista = $idTurista";  
+ $sql  ="SELECT idReservas, idTurista, fecha_reserva, idHabitaciones, dias, estado FROM reservas WHERE idHabitaciones IN (SELECT idHabitaciones FROM habitaciones WHERE idHoteles = $idHotel) ";  
    $query = $db->query($sql);
     $results = $query->getResultArray();
 
@@ -35,15 +35,15 @@
        $fecha = $hotel['fecha_reserva'];
        $idTurista = $hotel['idTurista'];
        $idReserva = $hotel['idReservas'];
-       $dias = $hotel['dias'];
+       $dias = $hotel['dias']; 
        $estado = $hotel['estado'];
 
-       $sql = "SELECT nombre FROM hoteles WHERE idHoteles in (SELECT idHoteles FROM habitaciones where idHabitaciones = $idHabitacion)";
+       $sql = "SELECT idPersona FROM turista WHERE idTurista = $idTurista";
        $query = $db->query($sql);
        $x = $query->getResultArray();
    
    foreach ($x as $row){
-       $nombreHotel = $row['nombre'];
+       $idPersona = $row['idPersona'];
    }
 
         $sql = "SELECT cantidad FROM pagos WHERE idReservas =  $idReserva";
@@ -62,7 +62,13 @@
             $tipo = $row['tipo'];
             }
 
-     
+       $sql = "SELECT CONCAT(primer_nombre, ' ', primer_apellido) as nombre FROM persona WHERE idPersona = $idPersona";
+       $query = $db->query($sql);
+       $y = $query->getResultArray();
+   
+   foreach ($y as $row){
+       $nombre = $row['nombre'];
+   }
    if($estado ==='aprobado'){
     ?>
 
@@ -76,7 +82,7 @@
       <td><?=$fecha?></td>
       <td style ="color: #27B401"><?=$estado?></td>
       <td>
-          <a href="<?=Base_URL('inspeccionar/user/'.$idReserva)?>" class="btn btn-success"><i class="bi bi-eye"></i></a>           
+          <a href="<?=Base_URL('inspeccionar/reservasA/'.$idReserva)?>" class="btn btn-success"><i class="bi bi-eye"></i></a>           
       </td>
     </tr>
     <?php
@@ -88,14 +94,14 @@
 
 <tr>
       <th scope="row"><?=$cont?></th>
-      <td><?=$nombreHotel?></td>
+      <td><?=$nombre?></td>
       <td><?=$tipo?></td>
       <td><?=$dias." días"?></td>
       <td><?="$ ".$cantidad?></td>
       <td><?=$fecha?></td>
       <td style ="color: #ED0718"><?=$estado?></td>
       <td>
-          <a href="<?=Base_URL('inspeccionar/user/'.$idReserva)?>" class="btn btn-success"><i class="bi bi-eye"></i></a>           
+          <a href="<?=Base_URL('inspeccionar/reservasA/'.$idReserva)?>" class="btn btn-success"><i class="bi bi-eye"></i></a>           
       </td>
     </tr>
     <?php

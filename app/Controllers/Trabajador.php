@@ -292,7 +292,7 @@ class Trabajador extends BaseController
         $nuevoNombre= $imagen->getRandomName();
         $imagen->move('../public/catalogoH/',$nuevoNombre);
 
-        if($tipo==="turista"){
+    
             $idCliente = $data['idPersona'];
            
                 $sql = "INSERT INTO reservas(idTurista, idHabitaciones, fecha_reserva, estado, dias) VALUES ('$idCliente','$idHabitacion','$fecha','pendiente', '$dias')";
@@ -310,22 +310,14 @@ class Trabajador extends BaseController
                 $query = $db->query($sql);
 
                 
-    }if($tipo==="nn"){
+  
         ?>        
         <script>
-             alert('Solo puede reservar iniciando sesión en el rol turista')
-             window.parent.location="<?=Base_url('empleado/res/'.$idHabitacion)?>";
+             window.parent.location="<?=Base_url('reservas/user')?>";
        </script> 
+    
    <?php
-    }
-    else{
-        ?>        
-        <script>
-             alert('Solo puede reservar iniciando sesión en el rol turista')
-             window.parent.location="<?=Base_url('empleado/reservar/'.$idHabitacion)?>";
-       </script> 
-   <?php
-    }
+    
 
     }
 
@@ -350,6 +342,81 @@ class Trabajador extends BaseController
       
 
         return view('registro/empleado/inspeccionar', $data);
+    }
+
+    public function aprobar($idPago){
+        
+        $db = \Config\Database::connect();
+
+        $menu = new Hoteles();
+        $data = $menu->tipoMenu();
+        $idEmpleado = $data['idEmpleado'];
+        $sql = "SELECT idReservas as id from pagos WHERE idPagos = $idPago";
+        $query = $db->query($sql);
+        $results = $query->getResultArray();
+        
+        foreach ($results as $row){
+            $idReserva = $row['id'];
+        }
+        $sql = "UPDATE reservas SET estado='aprobado' WHERE idReservas = $idReserva"; 
+        $query = $db->query($sql);
+
+        $sql = "UPDATE pagos SET idEmpleado='$idEmpleado',estado='aprobado' WHERE idPagos = $idPago";
+        $query = $db->query($sql);
+      
+
+        return view('registro/empleado/reservas', $data);
+    }
+
+    public function denegar(){
+        
+        $db = \Config\Database::connect();
+
+        $menu = new Hoteles();
+        $data = $menu->tipoMenu();
+        $idEmpleado = $data['idEmpleado'];
+        $idPago = $this->request->getVar('idPago');
+        $mensaje = $this->request->getVar('mensaje');
+        $contacto = $this->request->getVar('contacto');
+        $sql = "SELECT idReservas as id from pagos WHERE idPagos = $idPago";
+        $query = $db->query($sql);
+        $results = $query->getResultArray();
+        
+        foreach ($results as $row){
+            $idReserva = $row['id'];
+        }
+        $sql = "UPDATE reservas SET estado='denegado' WHERE idReservas = $idReserva"; 
+        $query = $db->query($sql);
+        
+        $sql = "UPDATE pagos SET idEmpleado='$idEmpleado',estado='denegado' WHERE idPagos = $idPago";
+        $query = $db->query($sql);
+      
+        $sql = "INSERT INTO mensaje(idPago, mensaje, contacto) VALUES ('$idPago','$mensaje','$contacto')";
+        $query = $db->query($sql);
+        return view('registro/empleado/reservas', $data);
+    }
+
+    public function mosReservasA(){
+        
+        $db = \Config\Database::connect();
+
+        $menu = new Hoteles();
+        $data = $menu->tipoMenu();
+      
+
+        return view('registro/empleado/reservasA', $data);
+    }
+
+    public function inspeccionarA($idReserva){
+        
+        $db = \Config\Database::connect();
+
+        $menu = new Hoteles();
+        $data = $menu->tipoMenu();
+        $data['reservaId'] = $idReserva; 
+      
+
+        return view('registro/empleado/inspeccionarA', $data);
     }
   
 }
